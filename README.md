@@ -69,5 +69,37 @@ Los datos corresponden a registros históricos de pedidos en aeropuertos, en una
 - [LightGBM](https://lightgbm.readthedocs.io/) / [XGBoost](https://xgboost.readthedocs.io/) / [CatBoost](https://catboost.ai/) (modelos de gradient boosting).  
 
 ---
-   git clone https://github.com/tuusuario/TaxiDemandPrediction.git
-   cd TaxiDemandPrediction
+
+## Instalación y ejecución:
+
+1) Clonar el repositorio y acceder a la carpeta del proyecto:
+   git clone https://github.com/SMVictorOrtiz/Sweet_Lift_Taxi_Project.git
+   cd Sweet_Lift_Taxi_Project
+
+2) (Opcional, recomendado) Crear y activar un entorno virtual:
+   # En macOS / Linux:
+   python3 -m venv .venv
+   source .venv/bin/activate
+
+   # En Windows (PowerShell):
+   python -m venv .venv
+   .venv\Scripts\Activate.ps1
+
+3) Instalar las dependencias necesarias:
+   pip install -r requirements.txt
+
+4) Ejecutar el notebook principal de análisis y modelado:
+   jupyter notebook Project_15_Series_Temporales.ipynb
+
+5) Ejecutar todas las celdas del notebook en orden para reproducir:
+   - Carga y remuestreo de datos horarios
+   - Análisis exploratorio de tendencias y patrones
+   - División entre entrenamiento y prueba (90% / 10%)
+   - Entrenamiento de modelos (regresión, árboles, boosting, etc.)
+   - Cálculo del RECM (debe ser ≤ 48)
+   - Comparación y conclusión sobre los modelos
+
+NOTAS IMPORTANTES:
+- El archivo de datos `taxi.csv` debe estar disponible en la ruta esperada (tal como está señalado en el notebook).
+- Asegúrate de ejecutar los comandos desde la raíz del repositorio.
+- Si usas modelos de series temporales adicionales como ARIMA o Prophet, revisa que tengas las dependencias correspondientes instaladas.
